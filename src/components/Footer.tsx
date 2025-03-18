@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import {
   MessageSquare,
@@ -22,7 +21,7 @@ const FooterLink = ({
   return (
     <a
       href={href}
-      className="text-slate-500 hover:text-brand-600 transition-colors duration-200 inline-flex items-center group"
+      className="text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors duration-200 inline-flex items-center group"
     >
       <ChevronRight
         size={14}
@@ -46,7 +45,7 @@ const SocialLink = ({
     <a
       href={href}
       className={cn(
-        "w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-500 hover:text-white transition-colors duration-300",
+        "w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-brand-500 hover:text-white transition-colors duration-300",
         className
       )}
     >
@@ -57,7 +56,7 @@ const SocialLink = ({
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
+    <footer className="bg-slate-50 dark:bg-[#0f172a] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -66,11 +65,11 @@ const Footer = () => {
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-700 to-brand-500">
                   WhatsNeed
                 </span>
-                <span className="ml-1 text-xs font-medium text-slate-500 mt-1">
+                <span className="ml-1 text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">
                   CRM
                 </span>
               </a>
-              <p className="mt-4 text-sm text-slate-600">
+              <p className="mt-4 text-sm text-slate-600 dark:text-slate-400">
                 Transformando o atendimento via WhatsApp em uma experiência excepcional para empresas de todos os tamanhos.
               </p>
             </div>
@@ -91,7 +90,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Empresa</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Empresa</h3>
             <ul className="space-y-3">
               <li>
                 <FooterLink href="#">Sobre nós</FooterLink>
@@ -112,7 +111,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Recursos</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Recursos</h3>
             <ul className="space-y-3">
               <li>
                 <FooterLink href="#">Centro de Ajuda</FooterLink>
@@ -133,31 +132,31 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Contato</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex">
-                <Phone size={16} className="mr-3 text-brand-500 flex-shrink-0 mt-1" />
-                <span className="text-slate-600">(11) 4002-8922</span>
+                <Phone size={16} className="mr-3 text-brand-500 dark:text-brand-400 flex-shrink-0 mt-1" />
+                <span className="text-slate-600 dark:text-slate-400">(11) 4002-8922</span>
               </li>
               <li className="flex">
-                <Mail size={16} className="mr-3 text-brand-500 flex-shrink-0 mt-1" />
-                <span className="text-slate-600">contato@whatsneed.com.br</span>
+                <Mail size={16} className="mr-3 text-brand-500 dark:text-brand-400 flex-shrink-0 mt-1" />
+                <span className="text-slate-600 dark:text-slate-400">contato@whatsneed.com.br</span>
               </li>
               <li className="flex">
-                <MapPin size={16} className="mr-3 text-brand-500 flex-shrink-0 mt-1" />
-                <span className="text-slate-600">
+                <MapPin size={16} className="mr-3 text-brand-500 dark:text-brand-400 flex-shrink-0 mt-1" />
+                <span className="text-slate-600 dark:text-slate-400">
                   Av. Paulista, 1234, Bela Vista, São Paulo - SP
                 </span>
               </li>
               <li className="mt-6">
-                <h4 className="text-sm font-medium text-slate-900 mb-3">
+                <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-3">
                   Inscreva-se para novidades
                 </h4>
                 <div className="flex">
                   <input
                     type="email"
                     placeholder="Seu email"
-                    className="flex-1 px-3 py-2 text-sm rounded-l-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                    className="flex-1 px-3 py-2 text-sm rounded-l-md border border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                   />
                   <button className="bg-brand-500 text-white rounded-r-md px-3 flex items-center justify-center hover:bg-brand-600 transition-colors">
                     <ChevronRight size={18} />
@@ -168,18 +167,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-slate-400">
           <div className="mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} WhatsNeed CRM. Todos os direitos reservados.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-brand-600 transition-colors">
+            <a href="#" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
               Termos
             </a>
-            <a href="#" className="hover:text-brand-600 transition-colors">
+            <a href="#" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
               Privacidade
             </a>
-            <a href="#" className="hover:text-brand-600 transition-colors">
+            <a href="#" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
               Cookies
             </a>
           </div>

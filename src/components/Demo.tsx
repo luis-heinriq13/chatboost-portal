@@ -1,4 +1,3 @@
-
 import { useRef, useEffect } from "react";
 import { ButtonCustom } from "./ui/button-custom";
 import { Play } from "lucide-react";
@@ -45,11 +44,11 @@ const Demo = () => {
   };
 
   return (
-    <section id="demo" className="py-20 bg-white relative overflow-hidden">
+    <section id="demo" className="py-20 bg-white dark:bg-[#121d2f] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-brand-100 filter blur-3xl opacity-30"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-brand-100 filter blur-3xl opacity-40"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-brand-100 dark:bg-brand-900/40 filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-brand-100 dark:bg-brand-900/40 filter blur-3xl opacity-40"></div>
       </div>
 
       <div 
@@ -58,21 +57,21 @@ const Demo = () => {
       >
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
               Veja Como Funciona
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               Descubra como o WhatsNeed CRM pode transformar o atendimento da sua empresa com nossa demonstração interativa.
             </p>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-strong border border-slate-100">
+          <div className="relative rounded-2xl overflow-hidden shadow-strong border border-slate-100 dark:border-slate-800">
             <div 
               ref={videoRef}
-              className="aspect-video bg-slate-100 relative transition-transform duration-300"
+              className="aspect-video bg-slate-100 dark:bg-slate-800 relative transition-transform duration-300"
             >
               {/* This would be a real video in production */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-slate-900 to-slate-800">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-slate-900 to-slate-800 dark:from-[#0f1729] dark:to-[#1e293b]">
                 <div className="w-full max-w-md">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-500/20 backdrop-blur-sm flex items-center justify-center">
@@ -113,7 +112,7 @@ const Demo = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-slate-600 mb-6">
+            <p className="text-slate-600 dark:text-slate-400 mb-6">
               Quer uma demonstração personalizada para o seu negócio?
             </p>
             <ButtonCustom variant="primary" size="lg" withArrow>

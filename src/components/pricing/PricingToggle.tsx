@@ -13,7 +13,7 @@ const PricingToggle = ({ annual, setAnnual }: PricingToggleProps) => {
       <span
         className={cn(
           "mr-3 text-sm font-medium",
-          !annual ? "text-slate-900" : "text-slate-500"
+          !annual ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"
         )}
       >
         Mensal
@@ -35,12 +35,12 @@ const PricingToggle = ({ annual, setAnnual }: PricingToggleProps) => {
       <span
         className={cn(
           "ml-3 text-sm font-medium",
-          annual ? "text-slate-900" : "text-slate-500"
+          annual ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"
         )}
       >
         Anual
       </span>
-      <Badge variant="outline" className="ml-2 bg-brand-50 text-brand-700 border-brand-200">
+      <Badge variant="outline" className="ml-2 bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800">
         Economize até 20%
       </Badge>
     </div>

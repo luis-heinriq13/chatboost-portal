@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,16 +64,16 @@ export default {
 				},
 				// Custom brand colors for WhatsNeed
 				brand: {
-					50: '#f0f9ff',
-					100: '#e0f2fe',
-					200: '#bae6fd',
-					300: '#7dd3fc',
-					400: '#38bdf8',
-					500: '#0ea5e9',
-					600: '#0284c7',
-					700: '#0369a1',
-					800: '#075985',
-					900: '#0c4a6e',
+					50: '#F7F1FF',
+					100: '#EFE2FF',
+					200: '#DBC5FF',
+					300: '#BF9DFF',
+					400: '#9E65FF',
+					500: '#6F2CC0',
+					600: '#5F24A0',
+					700: '#4F1C80',
+					800: '#3F1560',
+					900: '#2D0F3F',
 				},
 				// WhatsApp themed green
 				whatsapp: {
@@ -147,7 +146,7 @@ export default {
 			boxShadow: {
 				'soft': '0 2px 40px -4px rgba(0, 0, 0, 0.05)',
 				'strong': '0 8px 40px -4px rgba(0, 0, 0, 0.1)',
-				'focused': '0 0 0 2px rgba(14, 165, 233, 0.3)'
+				'focused': '0 0 0 2px rgba(111, 44, 192, 0.3)'
 			}
 		}
 	},

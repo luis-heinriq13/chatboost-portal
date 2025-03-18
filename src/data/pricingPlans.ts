@@ -36,21 +36,11 @@ export const getPricingPlans = (): PricingPlan[] => {
       queues: 8,
     },
     {
-      name: "Pro",
-      monthly: 59,
-      annually: 590,
-      description: "Para negócios estabelecidos com alto volume.",
-      features: features.map(() => ({ name: "", included: true })),
-      connections: 2,
-      users: 15,
-      queues: 15,
-    },
-    {
       name: "Corporate",
       monthly: 59,
       annually: 566,
       description: "A melhor escolha para empresas maiores.",
-      features: features.map(() => ({ name: "", included: true })),
+      features: features.map((f) => ({ name: f, included: true })),
       connections: 2,
       users: 15,
       queues: 15,
@@ -58,7 +48,7 @@ export const getPricingPlans = (): PricingPlan[] => {
   ];
 
   // Update the "features" array for the last plan
-  plans[3].features = features.map((f) => ({ name: f, included: true }));
+  plans[2].features = features.map((f) => ({ name: f, included: true }));
 
   return plans;
 };

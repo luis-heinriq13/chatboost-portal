@@ -21,28 +21,28 @@ const PricingCard = ({ plan, isAnnual, index }: PricingCardProps) => {
       className={cn(
         "relative rounded-xl overflow-hidden transition-all duration-300",
         plan.highlight
-          ? "border-2 border-brand-500 shadow-strong transform hover:-translate-y-1"
-          : "border border-slate-200 shadow-soft hover:shadow-strong hover:-translate-y-1"
+          ? "border-2 border-[#6F2CC0] shadow-strong transform hover:-translate-y-1"
+          : "border border-slate-200 dark:border-slate-700 shadow-soft hover:shadow-strong hover:-translate-y-1"
       )}
     >
       {plan.highlight && (
         <div className="absolute top-0 right-0 left-0">
-          <div className="bg-brand-500 text-white text-xs font-medium py-1 text-center">
+          <div className="bg-[#6F2CC0] text-white text-xs font-medium py-1 text-center">
             MAIS POPULAR
           </div>
         </div>
       )}
 
-      <div className={cn("p-6", plan.highlight ? "pt-10" : "")}>
-        <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>
-        <p className="text-slate-600 h-12 mb-4">{plan.description}</p>
+      <div className={cn("p-6 bg-white dark:bg-[#131e32]", plan.highlight ? "pt-10" : "")}>
+        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{plan.name}</h3>
+        <p className="text-slate-600 dark:text-slate-400 h-12 mb-4">{plan.description}</p>
 
         <div className="mb-4">
           <div className="flex items-end">
-            <span className="text-4xl font-bold text-slate-900">
+            <span className="text-4xl font-bold text-slate-900 dark:text-white">
               R${price.toFixed(2).replace(".", ",")}
             </span>
-            <span className="text-slate-600 ml-2">
+            <span className="text-slate-600 dark:text-slate-400 ml-2">
               {isAnnual ? "/ano" : "/mês"}
             </span>
           </div>
@@ -55,22 +55,22 @@ const PricingCard = ({ plan, isAnnual, index }: PricingCardProps) => {
           )}
         </div>
 
-        <div className="mb-6 space-y-1 text-sm text-slate-600">
+        <div className="mb-6 space-y-1 text-sm text-slate-600 dark:text-slate-400">
           <div className="flex items-center">
             <div className="w-4 h-4 mr-3 flex-shrink-0">
-              <CheckCircle size={16} className="text-brand-500" />
+              <CheckCircle size={16} className="text-[#6F2CC0] dark:text-brand-400" />
             </div>
             <span>{plan.connections} {plan.connections > 1 ? "Conexões" : "Conexão"}</span>
           </div>
           <div className="flex items-center">
             <div className="w-4 h-4 mr-3 flex-shrink-0">
-              <CheckCircle size={16} className="text-brand-500" />
+              <CheckCircle size={16} className="text-[#6F2CC0] dark:text-brand-400" />
             </div>
             <span>{plan.users} Usuários</span>
           </div>
           <div className="flex items-center">
             <div className="w-4 h-4 mr-3 flex-shrink-0">
-              <CheckCircle size={16} className="text-brand-500" />
+              <CheckCircle size={16} className="text-[#6F2CC0] dark:text-brand-400" />
             </div>
             <span>{plan.queues} Filas</span>
           </div>
