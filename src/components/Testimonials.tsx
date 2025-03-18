@@ -1,4 +1,3 @@
-
 import { useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
@@ -45,7 +44,7 @@ const Testimonial = ({ quote, author, role, company, rating, delay }: Testimonia
     <div
       ref={testimonialRef}
       className={cn(
-        "bg-white rounded-xl shadow-soft border border-slate-100 p-6 transition-all duration-500 ease-out opacity-0 translate-y-8",
+        "bg-white dark:bg-[#131e32] rounded-xl shadow-soft border border-slate-100 dark:border-slate-800 p-6 transition-all duration-500 ease-out opacity-0 translate-y-8",
         "hover:shadow-strong hover:-translate-y-1 transition-all duration-300"
       )}
     >
@@ -56,19 +55,19 @@ const Testimonial = ({ quote, author, role, company, rating, delay }: Testimonia
             size={16}
             className={cn(
               "mr-1",
-              i < rating ? "text-yellow-400 fill-yellow-400" : "text-slate-300"
+              i < rating ? "text-yellow-400 fill-yellow-400" : "text-slate-300 dark:text-slate-600"
             )}
           />
         ))}
       </div>
-      <blockquote className="text-slate-700 mb-6">"{quote}"</blockquote>
+      <blockquote className="text-slate-700 dark:text-slate-300 mb-6">"{quote}"</blockquote>
       <div className="flex items-center">
-        <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-semibold mr-3">
+        <div className="w-10 h-10 bg-brand-100 dark:bg-brand-900/40 rounded-full flex items-center justify-center text-brand-600 dark:text-brand-400 font-semibold mr-3">
           {author.substring(0, 1)}
         </div>
         <div>
-          <div className="font-medium text-slate-900">{author}</div>
-          <div className="text-sm text-slate-500">
+          <div className="font-medium text-slate-900 dark:text-white">{author}</div>
+          <div className="text-sm text-slate-500 dark:text-slate-400">
             {role}, {company}
           </div>
         </div>
@@ -106,13 +105,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-white dark:bg-[#121d2f]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             O que Nossos Clientes Dizem
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-600 dark:text-slate-300">
             Veja como o WhatsNeed CRM está transformando negócios em todo o Brasil
           </p>
         </div>
@@ -132,14 +131,14 @@ const Testimonials = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex rounded-full bg-brand-50 px-6 py-3 mb-3">
-            <div className="text-brand-700 font-medium">Mais de 1000 empresas confiam no WhatsNeed CRM</div>
+          <div className="inline-flex rounded-full bg-brand-50 dark:bg-brand-900/20 px-6 py-3 mb-3">
+            <div className="text-brand-700 dark:text-brand-400 font-medium">Mais de 1000 empresas confiam no WhatsNeed CRM</div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 lg:gap-16 opacity-70">
             {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="h-12 flex items-center">
-                <div className="h-2 bg-slate-300 rounded w-24"></div>
+                <div className="h-2 bg-slate-300 dark:bg-slate-700 rounded w-24"></div>
               </div>
             ))}
           </div>
